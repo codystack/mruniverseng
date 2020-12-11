@@ -14,7 +14,7 @@ include ('./components/navbar.php');
                           #MUN2021<br>30 Gladiators
                       </h1>
                       <p class="mb-6 lead text-white-50">
-                        Mr. Universe Nigeria is the most anticipated male modeling-pageant in the country.
+                      Mr. Universe Nigeria is the most anticipated male modeling-pageant TV Reality Show in the country.
                       </p>
                       <a href="register" class="btn btn-primary mr-3">Register Now</a>
                     </div>
