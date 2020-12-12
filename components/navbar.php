@@ -20,12 +20,24 @@
                         </li>
                         <li class="nav-item"><a class="nav-link" href="\">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="\">Gallery</a></li>
+                        <!--<li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="menu-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                            Gallery
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-arrow dropdown-menu-right dropdown-menu-xl-left " aria-labelledby="menu-3">
+                                <li>
+                                    <a class="dropdown-item" href="blog.html">
+                                    Blog
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>-->
+                        <li class="nav-item"><a class="nav-link" href="gallery">Gallery</a></li>
                         <li class="nav-item"><a class="nav-link" href="contestants">Contestants</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>
                     </ul>
                     <div class="header-btn">
-                        <a href="../pages/signup.html " class="btn btn-outline-primary btn-sm" style="margin-right: 10px">Register</a>
+                        <a href="register" class="btn btn-outline-primary btn-sm" style="margin-right: 10px">Register</a>
                     </div>
                     <div class="header-btn">
                         <a href="vote " class="btn btn-primary btn-sm ">Vote Now</a>
