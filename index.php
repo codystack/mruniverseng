@@ -1,9 +1,7 @@
 <?php
-include ('./components/header.php');
+require ('./components/header.php');
 include ('./components/navbar.php');
-?>
-        
-    
+?>  
     <!-- hero section -->
     <div class="bg-dark right-slant-shape pt-lg-13 py-12 pb-lg-0 " style="background-image: url(assets/images/home-slide.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
         <div class="container">
@@ -122,7 +120,7 @@ include ('./components/navbar.php');
       </div>
     </div>
     <!-- coach team -->
-    <div class="py-7 pt-lg-14 pb-lg-12">
+    <div class="py-7 pt-lg-14">
       <div class="container">
         <div class="row">
           <div class="offset-xl-2 col-xl-8 col-lg-12 col-md-12 col-12">
@@ -169,76 +167,55 @@ A mixed group of carefully-vetted candidates are ushered into a house miles away
       <div class="container">
         <div class="row">
           <div class="offset-lg-2 col-lg-8 col-md-12 col-12 mb-5">
-            <div class="card z-index-1">
-              <div class="card-body p-4 p-lg-9">
-                <div class="mb-8 text-center">
-                  <h2 class="mb-3">Join the Program</h2>
-                  <p>
-                    This Masterclass is absolutely FREE and plays in your local
-                    <br />time. You can choose your preferred session below.
-                  </p>
-                </div>
-                <form class="form-row">
-                  <div class="from-group col-12 col-md-6 mb-3">
-                    <label for="name" class="font-14 text-dark">Name</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="name"
-                      placeholder="Name"
-                      name="name"
-                      required=""
-                    />
+            <div class="card text-center z-index-1">
+              <div class="card-body p-4 p-lg-8">
+                  <div class="mb-5">
+                      <h2 class="mb-3">We love Hearing From You</h2>
+                      <p>
+                          If you are looking forward to discuss business or make inquiry,<br>please fill out this form. We will get in touch with you.
+                      </p>
                   </div>
-
-                  <div class="from-group col-12 col-md-6 mb-3">
-                    <label for="email" class="font-14 text-dark">Email</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="email"
-                      placeholder="Email"
-                      name="email"
-                      required=""
-                    />
+                  <div>
+                  <i class="fa fa-spin fa-spinner fa-2x" style="display: none;" id="spinner"></i>
                   </div>
-                  <div class="form-group col-12 col-md-6 mb-3">
-                    <label for="program-date" class="font-14 text-dark">Date</label>
-                    <input
-                      type="text"
-                      id="program-date"
-                      class="form-control "
-                      placeholder="Select Date"
-                    />
+                  <div class="alert alert-danger" id="error-message" style="display: none;">
+                      Error is sending message.
                   </div>
-                  <div class="form-group col-12 col-md-6 mb-4">
-                    <label for="time" class="font-14 text-dark">Time</label>
-                    <select class="custom-select" id="time"> 
-                      <option selected="">Select time</option>
-                      <option value="1">10:00 AM</option>
-                      <option value="2">12:00 PM</option>
-                      <option value="3">02:40 PM</option>
-                    </select>
+                  <div class="alert alert-success" id="success-message" style="display: none;">
+                      Message sent successfully!
                   </div>
-                  <div class="col-12 ">
-                    <button type="submit" class="btn btn-primary btn-block">
-                      Reserve My Spot Now
-                    </button>
-                  </div>
-                  <div class="col-12">
-                    <p class="mt-3 text-muted mb-0 small ">
-                      By clicking the button above, you are creating an account
-                      with Coach and agree to our
-                      <a href="#!" class="text-secondary font-weight-semi-bold">
-                        Privacy Policy</a
-                      >
-                      and
-                      <a href="#!" class="text-secondary font-weight-semi-bold"
-                        >Terms of Use</a
-                      >, including receiving emails.
-                    </p>
-                  </div>
-                </form>
+                  <form class="form-row" autocomplete="off" id="contact-form" onClick="return false;">
+                      <div class="from-group col-md-6 col-12 mb-3">
+                          <label for="fname" class="sr-only">First Name</label>
+                          <input type="text" class="form-control" id="firstName" placeholder="First Name" name="firstName" required />
+                      </div>
+                      <div class="from-group col-md-6 col-12 mb-3">
+                          <label for="lname" class="sr-only">Last Name</label>
+                          <input type="text" class="form-control" id="lastName" placeholder="Last Name" name="lastName" required />
+                      </div>
+                      <div class="from-group col-md-6 col-12 mb-3">
+                          <label for="phone" class="sr-only"> Phone Number</label>
+                          <input type="tel" class="form-control" id="phoneNum" placeholder="Phone No." name="phoneNum" required />
+                      </div>
+                      <div class="from-group col-md-6 col-12 mb-3">
+                          <label for="email" class="sr-only"> Email</label>
+                          <input type="email" class="form-control" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" id="email" placeholder="Email" name="email" required />
+                      </div>
+                      <div class="form-group col-12 mb-3">
+                          <label for="purpose" class="sr-only">Purpose</label>
+                          <select class="custom-select" id="purpose" name="purpose">
+                          <option selected>Select Purpose</option>
+                          <option value="Partnership">Partnership</option>
+                          <option value="Sponsorship">Sponsorship</option>
+                          <option value="Enquiries">Enquiries</option>
+                          </select>
+                      </div>
+                      <div class="col-12">
+                          <button name="register" id="register" class="btn btn-primary btn-block">
+                          Send Messages
+                          </button>
+                      </div>
+                  </form>
               </div>
             </div>
           </div>

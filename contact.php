@@ -1,5 +1,5 @@
 <?php
-include ('./components/header.php');
+require_once ('./components/header.php');
 include ('./components/navbar.php');
 ?>
     <!-- hero section -->
@@ -31,36 +31,45 @@ include ('./components/navbar.php');
                                     If you are looking forward to discuss business or make inquiry,<br>please fill out this form. We will get in touch with you.
                                 </p>
                             </div>
-                            <form class="form-row">
+                            <div>
+                            <i class="fa fa-spin fa-spinner fa-2x" style="display: none;" id="spinner"></i>
+                            </div>
+                            <div class="alert alert-danger" id="error-message" style="display: none;">
+                                Error is sending message.
+                            </div>
+                            <div class="alert alert-success" id="success-message" style="display: none;">
+                                Message sent successfully!
+                            </div>
+                            <form class="form-row" autocomplete="off" id="contact-form" onClick="return false;">
                                 <div class="from-group col-md-6 col-12 mb-3">
                                     <label for="fname" class="sr-only">First Name</label>
-                                    <input type="text" class="form-control" id="fname" placeholder="First Name" name="fname" required />
+                                    <input type="text" class="form-control" id="firstName" placeholder="First Name" name="firstName" required />
                                 </div>
                                 <div class="from-group col-md-6 col-12 mb-3">
                                     <label for="lname" class="sr-only">Last Name</label>
-                                    <input type="text" class="form-control" id="lname" placeholder="Last Name" name="lname" required />
+                                    <input type="text" class="form-control" id="lastName" placeholder="Last Name" name="lastName" required />
                                 </div>
                                 <div class="from-group col-md-6 col-12 mb-3">
                                     <label for="phone" class="sr-only"> Phone Number</label>
-                                    <input type="tel" class="form-control" id="tel" placeholder="Phone No." name="tel" required />
+                                    <input type="tel" class="form-control" id="phoneNum" placeholder="Phone No." name="phoneNum" required />
                                 </div>
                                 <div class="from-group col-md-6 col-12 mb-3">
                                     <label for="email" class="sr-only"> Email</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Email" name="email" required />
+                                    <input type="email" class="form-control" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" id="email" placeholder="Email" name="email" required />
                                 </div>
                                 <div class="form-group col-12 mb-3">
                                     <label for="purpose" class="sr-only">Purpose</label>
-                                    <select class="custom-select" id="purpose">
-                      <option selected>Select Purpose</option>
-                      <option value="Partnership">Partnership</option>
-                      <option value="Sponsorship">Sponsorship</option>
-                      <option value="Enquiries">Enquiries</option>
-                    </select>
+                                    <select class="custom-select" id="purpose" name="purpose">
+                                    <option selected>Select Purpose</option>
+                                    <option value="Partnership">Partnership</option>
+                                    <option value="Sponsorship">Sponsorship</option>
+                                    <option value="Enquiries">Enquiries</option>
+                                    </select>
                                 </div>
                                 <div class="col-12">
-                                    <button type="submit" name="contact" class="btn btn-primary btn-block">
-                      Send Messages
-                    </button>
+                                    <button name="register" id="register" class="btn btn-primary btn-block">
+                                    Send Messages
+                                    </button>
                                 </div>
                             </form>
                         </div>
@@ -107,5 +116,6 @@ include ('./components/navbar.php');
             </div>
         </div>
     </div>
- 
+
+
 <?php include ('./components/footer.php'); ?>
