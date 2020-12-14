@@ -13,7 +13,7 @@ include ('db.php');
 
 
     $sql = "INSERT INTO messages (firstName, lastName, phoneNum, email, purpose)"
-        . "VALUES ('$firstName', '$lastName', '$phoneNum', 'email', 'purpose')";
+        . "VALUES ('$firstName', '$lastName', '$phoneNum', '$email', '$purpose')";
     
         if ($conn->query($sql) === TRUE) {
             echo "success";

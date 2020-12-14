@@ -55,7 +55,7 @@ include ('./components/navbar.php');
                                 </div>
                                 <div class="from-group col-md-6 col-12 mb-3">
                                     <label for="email" class="sr-only"> Email</label>
-                                    <input type="email" class="form-control" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" id="email" placeholder="Email" name="email" required />
+                                    <input type="email" class="form-control" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" placeholder="Email" name="email" required />
                                 </div>
                                 <div class="form-group col-12 mb-3">
                                     <label for="purpose" class="sr-only">Purpose</label>

@@ -12,7 +12,14 @@ $(document).ready(function(){
         data: new FormData($('#contact-form').get(0)),
         dataType: "text",
         processData: false,
-        cache:false
+        cache:false,
+        success: function(data){
+            if (data == "success"){
+                setTimeout(function() {
+                    document.location.reload()
+              }, 5000); 
+              }
+        }
         });
         
         x.done(function(serverResponse) {
@@ -26,12 +33,10 @@ $(document).ready(function(){
         
         x.fail(function(){
             
-        
         });
         
         x.always(function(){
             $('#spinner').hide();
         });
     });
-
 });
