@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
-    <title>Mr. Universe Nigeria&trade; :: Redefining Masculinity</title>
+    <title>Register :: Mr. Universe Nigeria&trade;</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,69 +22,121 @@
     <link rel="shortcut icon" href="https://i.imgur.com/sTG7yhS.png" />
 </head>
 
-<body class="bg-light">
+<body>
 
-    <!-- content section -->
-
-    <div class="d-flex align-items-center position-relative vh-100">
-
-
-        <div class="col-lg-5 col-xl-4 d-none d-lg-flex border-top border-primary border-top-4 align-items-center vh-100 px-0" style="background-image: url(assets/images/register-img.jpg); background-position:13% 50%;">
-        </div>
+    <!-- sign up -->
+    <div class="min-vh-100 d-flex align-items-center " style="background:url(https://i.imgur.com/KDDYQN5.jpg)no-repeat; background-size: cover;">
         <div class="container">
-            <div class="row no-gutters">
-                <div class="col-md-8 col-lg-7 col-xl-6 offset-md-2 offset-lg-2 offset-xl-3 space-top-3 space-lg-0">
-                    <!-- Form -->
-                    <a href="\" class="mb-4 mt-10 d-flex justify-content-center">
-                        <img src="assets/images/logo-dark.png" alt="" width="170px"></a>
+            <div class="row">
+                <div class="offset-lg-3 col-lg-6 col-12">
+                    <a href="\" class="mb-4 mt-5 d-flex justify-content-center"><img src="assets/images/logo.png" alt="" width="250px" /></a>
 
-                    <div class="bg-white p-4 p-xl-6 p-xxl-8 p-lg-4  rounded-lg border">
-                        <form>
-                            <h1 class="mb-2 text-center h3 ">Create Account</h1>
-                            <p class="mb-4 text-center">Complete the form below to get started.</p>
-
+                    <div class="bg-dark p-4 p-lg-8 rounded-lg">
+                        <form enctype="multipart/form-data" autocomplete="off" id="contact-form" onClick="return false;">
+                            <h1 class="mb-2 text-white text-center">Registration</h1>
+                            <p class="mb-4 text-center">Please fill the form with correct details!</p>
                             <div class="form-group">
-                                <label for="email" class="font-14 text-dark">Email<span class="text-danger">*</span> </label>
-                                <input type="email" id="email" class="form-control" placeholder="Email address" required="">
+                                <label for="fname">Firt Name </label>
+                                <input type="text" id="fname" name="fname" class="form-control border-0" placeholder="First Name" required="" />
                             </div>
                             <div class="form-group">
-                                <label for="password" class="font-14 text-dark">Password<span class="text-danger">*</span></label>
-                                <input type="password" id="password" class="form-control" placeholder="Password" required="">
+                                <label for="lname">Last Name </label>
+                                <input type="text" id="lname" name="lname" class="form-control border-0" placeholder="Last Name" required="" />
                             </div>
                             <div class="form-group">
-                                <label for="confirmPassword" class="font-14 text-dark">Confirm Password<span class="text-danger">*</span></label>
-                                <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm Password" required="">
+                                <label for="email">Email </label>
+                                <input type="email" id="email" name="remail" class="form-control border-0" placeholder="Email address" required="" />
                             </div>
-
+                            <div class="form-group">
+                                <label for="phone">Phone Number </label>
+                                <input type="tel" id="phone" name="phone" class="form-control border-0" placeholder="Phone Number(WhatsApp No.)" required="" />
+                            </div>
+                            <div class="form-group">
+                                <label for="state">State of Residence </label>
+                                <select class="custom-select" id="state" name="state">
+                                <option selected>Select State of Residence</option>
+                                <option value="Abia">Abia</option>
+                                <option value="Adamawa">Adamawa</option>
+                                <option value="Akwa Ibom">Akwa Ibom</option>
+                                <option value="Anambra">Anambra</option>
+                                <option value="Bauchi">Bauchi</option>
+                                <option value="Bayelsa">Bayelsa</option>
+                                <option value="Benue">Benue</option>
+                                <option value="Borno">Borno</option>
+                                <option value="Cross River">Cross River</option>
+                                <option value="Delta">Delta</option>
+                                <option value="Ebonyi">Ebonyi</option>
+                                <option value="Edo">Edo</option>
+                                <option value="Ekiti">Ekiti</option>
+                                <option value="Enugu">Enugu</option>
+                                <option value="Abuja">FCT - Abuja</option>
+                                <option value="Gombe">Gombe</option>
+                                <option value="Imo">Imo</option>
+                                <option value="Jigawa">Jigawa</option>
+                                <option value="Kaduna">Kaduna</option>
+                                <option value="Kano">Kano</option>
+                                <option value="Katsina">Katsina</option>
+                                <option value="Kebbi">Kebbi</option>
+                                <option value="Kogi">Kogi</option>
+                                <option value="Kwara">Kwara</option>
+                                <option value="Lagos">Lagos</option>
+                                <option value="Nasarawa">Nasarawa</option>
+                                <option value="Niger">Niger</option>
+                                <option value="Ogun">Ogun</option>
+                                <option value="Ondo">Ondo</option>
+                                <option value="Osun">Osun</option>
+                                <option value="Oyo">Oyo</option>
+                                <option value="Plateau">Plateau</option>
+                                <option value="Rivers">Rivers</option>
+                                <option value="Sokoto">Sokoto</option>
+                                <option value="Taraba">Taraba</option>
+                                <option value="Yobe">Yobe</option>
+                                <option value="Zamfara">Zamfara</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="age">Age </label>
+                                <select class="custom-select" id="age" name="age">
+                                <option selected>Select Age</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="ighandle">Instagram Handle</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="ighandle">@</span>
+                                    </div>
+                                    <input type="text" class="form-control"name="ighandle" id="ighandle" placeholder="Instagram Handle" aria-describedby="inputGroupPrepend2" required>
+                                </div>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="upload">Upload 3 Photos</label>
+                                <input type="file" name="upload" id="file-1" class="custom-input-file" data-multiple-caption="{count} files selected" multiple />
+                            </div>
 
                             <button class="btn btn-primary btn-block" type="submit">
-                                Register
-                              </button>
-                            <p class="mt-3 mb-0 text-muted font-14">
-                                Already member?<a href="signin-cover.html"> Sign in.</a>
-                            </p>
+                            Sign up
+                            </button>
                         </form>
                     </div>
-                    <!-- footer links -->
-                    <div class="mt-3 nav-footer-links">
-                        <ul class="nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#!">Privacy Policy </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#!">Terms & Conditions</a>
-                            </li>
-
-
-                        </ul>
-                    </div>
-                    <!-- End Form -->
                 </div>
             </div>
         </div>
-
     </div>
-
     <!-- Optional JavaScript -->
 
 
@@ -102,16 +153,14 @@
     <script src="assets/libs/inputmask/dist/jquery.inputmask.min.js"></script>
     <script src="assets/libs/tiny-slider/dist/min/tiny-slider.js"></script>
 
-
     <!-- clipboard -->
     <script src="../../../cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
 
 
-
     <!-- Theme JS -->
     <script src="assets/js/theme.min.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
 
 
-<!-- Mirrored from codescandy.com/coach/pages/signup-cover.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Dec 2020 21:22:17 GMT -->
 </html>

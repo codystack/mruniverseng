@@ -31,9 +31,12 @@ include ('./components/navbar.php');
                                     If you are looking forward to discuss business or make inquiry,<br>please fill out this form. We will get in touch with you.
                                 </p>
                             </div>
-                            <div>
-                            <i class="fa fa-spin fa-spinner fa-2x" style="display: none;" id="spinner"></i>
+                            <div class="spinner-grow" style="width: 3rem; height: 3rem; display: none;" id="spinner" role="status">
+                                <span class="sr-only">Loading...</span>
                             </div>
+                            <!--<div>
+                            <i class="fa fa-spin fa-spinner fa-2x" style="display: none;" id="spinner"></i>
+                            </div>-->
                             <div class="alert alert-danger" id="error-message" style="display: none;">
                                 Error is sending message.
                             </div>
