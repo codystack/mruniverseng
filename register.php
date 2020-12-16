@@ -1,7 +1,7 @@
 <?php
 session_start();
 $_SESSION['message'] = '';
-$conn = new mysqli('localhost', 'root', 'Webify2020!!', 'mruniverseng');
+include ('./config/db.php');
 
 if (isset($_POST['register_btn'])) {
 
