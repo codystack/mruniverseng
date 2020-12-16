@@ -175,18 +175,7 @@ A mixed group of carefully-vetted candidates are ushered into a house miles away
                           If you are looking forward to discuss business or make inquiry,<br>please fill out this form. We will get in touch with you.
                       </p>
                   </div>
-                  <div class="spinner-grow" style="width: 3rem; height: 3rem; display: none;" id="spinner" role="status">
-                    <span class="sr-only">Loading...</span>
-                  </div>
-                  <!--<div>
-                  <i class="fa fa-spin fa-spinner fa-2x" style="display: none;" id="spinner"></i>
-                  </div>-->
-                  <div class="alert alert-danger" id="error-message" style="display: none;">
-                      Error is sending message.
-                  </div>
-                  <div class="alert alert-success" id="success-message" style="display: none;">
-                      Message sent successfully!
-                  </div>
+                  
                   <form class="form-row" autocomplete="off" id="contact-form" onClick="return false;">
                       <div class="from-group col-md-6 col-12 mb-3">
                           <label for="fname" class="sr-only">First Name</label>
@@ -219,6 +208,18 @@ A mixed group of carefully-vetted candidates are ushered into a house miles away
                           </button>
                       </div>
                   </form>
+                  <div class="spinner-grow" style="width: 3rem; height: 3rem; display: none;" id="spinner" role="status">
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                  <!--<div>
+                  <i class="fa fa-spin fa-spinner fa-2x" style="display: none;" id="spinner"></i>
+                  </div>-->
+                  <div class="alert alert-danger" id="error-message" style="display: none;">
+                      Error is sending message.
+                  </div>
+                  <div class="alert alert-success" id="success-message" style="display: none;">
+                      Message sent successfully!
+                  </div>
               </div>
             </div>
           </div>
