@@ -8904,11 +8904,27 @@ a.badge-light-success:focus {
     border-color: #f9cac7
 }
 
+.alert-danger1 {
+    color: #8c323d;
+    background-color: #fbd9d7;
+    border-color: #f9cac7;
+    margin-bottom: 1rem;
+    border-radius: .25rem;
+}
+
 .alert-danger hr {
     border-top-color: #f7b4b0
 }
 
+.alert-danger1 hr {
+    border-top-color: #f7b4b0
+}
+
 .alert-danger .alert-link {
+    color: #66252d
+}
+
+.alert-danger1 .alert-link {
     color: #66252d
 }
 
@@ -32585,7 +32601,19 @@ a.badge-light-success:focus {
     border-color: #f9cac7
 }
 
+.alert-danger1 {
+    color: #8c323d;
+    background-color: #fbd9d7;
+    border-color: #f9cac7;
+    border-radius: .25rem;
+    
+}
+
 .alert-danger hr {
+    border-top-color: #f7b4b0
+}
+
+.alert-danger1 hr {
     border-top-color: #f7b4b0
 }
 

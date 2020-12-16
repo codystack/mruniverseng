@@ -1,3 +1,49 @@
+<?php
+session_start();
+$_SESSION['message'] = '';
+$conn = new mysqli('localhost', 'root', 'Webify2020!!', 'mruniverseng');
+
+if (isset($_POST['register_btn'])) {
+
+    $fname          = $conn->real_escape_string($_POST['fname']);
+    $lname          = $conn->real_escape_string($_POST['lname']);
+    $email          = $conn->real_escape_string($_POST['email']);
+    $phone          = $conn->real_escape_string($_POST['phone']);
+    $state          = $conn->real_escape_string($_POST['state']);
+    $age            = $conn->real_escape_string($_POST['age']);
+    $ighandle       = $conn->real_escape_string($_POST['ighandle']);
+    $picture_path   = $conn->real_escape_string('upload/'.$_FILES['picture']['name']);
+
+    //make sure file type is image
+    if (preg_match("!image!", $_FILES['picture']['type'])) {
+
+        //copy image to upload folder
+        if (copy($_FILES['picture']['tmp_name'], $picture_path)) {
+
+            $_SESSION['fname'] = $fname;
+            $_SESSION['email'] = $email;
+
+            $user_check_query = "SELECT * FROM users WHERE email='$email' LIMIT 1";
+            $result = mysqli_query($conn, $user_check_query);
+            $user = mysqli_fetch_assoc($result);
+            if ($user) { // if user exists
+                if ($user['email'] === $email) {
+                $_SESSION['message'] = "User already exist!";
+                }
+            }else { $sql = "INSERT INTO users (fname, lname, email, phone, state, age, ighandle, picture)"
+                    . "VALUES ('$fname', '$lname', '$email', '$phone', '$state', '$age', '$ighandle', '$picture_path')";
+                    if($query){
+
+                    }
+                    mysqli_query($conn, $sql);
+                    $_SESSION['email'] = $email;
+                    header("Location: regsuccess");
+                    exit();   
+            }
+        }
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,9 +78,10 @@
                     <a href="\" class="mb-4 mt-5 d-flex justify-content-center"><img src="assets/images/logo.png" alt="" width="250px" /></a>
 
                     <div class="bg-dark p-4 p-lg-8 rounded-lg">
-                        <form enctype="multipart/form-data" autocomplete="off" id="contact-form" onClick="return false;">
+                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" enctype="multipart/form-data" autocomplete="on">
                             <h1 class="mb-2 text-white text-center">Registration</h1>
                             <p class="mb-4 text-center">Please fill the form with correct details!</p>
+                            <div class="alert-danger1 text-center" role="alert" id="message"><?= $_SESSION['message'] ?></div>
                             <div class="form-group">
                                 <label for="fname">Firt Name </label>
                                 <input type="text" id="fname" name="fname" class="form-control border-0" placeholder="First Name" required="" />
@@ -45,7 +92,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="email">Email </label>
-                                <input type="email" id="email" name="remail" class="form-control border-0" placeholder="Email address" required="" />
+                                <input type="email" id="email" name="email" class="form-control border-0" placeholder="Email address" required="" />
                             </div>
                             <div class="form-group">
                                 <label for="phone">Phone Number </label>
@@ -96,7 +143,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="age">Age </label>
-                                <select class="custom-select" id="age" name="age">
+                                <select class="custom-select" name="age">
                                 <option selected>Select Age</option>
                                 <option value="17">17</option>
                                 <option value="18">18</option>
@@ -124,11 +171,10 @@
                                 </div>
                             </div>
                             <div class="form-group mb-4">
-                                <label for="upload">Upload 3 Photos</label>
-                                <input type="file" name="upload" id="file-1" class="custom-input-file" data-multiple-caption="{count} files selected" multiple />
+                                <label for="picture">Upload photograph</label>
+                                <input type="file" name="picture" id="picture" class="custom-input-file" accept="image/*" />
                             </div>
-
-                            <button class="btn btn-primary btn-block" type="submit">
+                            <button type="submit" class="btn btn-primary btn-block" name="register_btn" id="register_btn">
                             Sign up
                             </button>
                         </form>
@@ -138,7 +184,6 @@
         </div>
     </div>
     <!-- Optional JavaScript -->
-
 
     <!-- Libs JS -->
     <script src="assets/libs/jquery/dist/jquery.min.js"></script>
@@ -154,12 +199,13 @@
     <script src="assets/libs/tiny-slider/dist/min/tiny-slider.js"></script>
 
     <!-- clipboard -->
-    <script src="../../../cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+    <script src="assets/js/clipboard.min.js"></script>
 
 
     <!-- Theme JS -->
     <script src="assets/js/theme.min.js"></script>
-    <script src="assets/js/app.js"></script>
+
+
 </body>
 
 

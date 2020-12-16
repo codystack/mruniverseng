@@ -2,7 +2,7 @@
 session_start();
 $_SESSION['message'] = '';
 
-include ('db.php');
+$conn = new mysqli('localhost', 'root', 'Webify2020!!', 'mruniverseng');
 
 
     $firstName  = $conn->real_escape_string($_POST['firstName']);
@@ -20,3 +20,6 @@ include ('db.php');
           } else {
             echo "error";
           }
+
+
+    

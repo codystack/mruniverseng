@@ -51,7 +51,7 @@
     <script src="assets/libs/tiny-slider/dist/min/tiny-slider.js"></script>
 
     <!-- clipboard -->
-    <script src="../../cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+    <script src="assets/js/clipboard.min.js"></script>
 
     <!-- Theme JS -->
     <script src="assets/js/theme.min.js"></script>
