@@ -100,7 +100,7 @@ if (isset($_POST['register_btn'])) {
                             </div>
                             <div class="form-group">
                                 <label for="state">State of Residence </label>
-                                <select class="custom-select" id="state" name="state">
+                                <select class="custom-select" id="state" name="state" required="">
                                 <option selected>Select State of Residence</option>
                                 <option value="Abia">Abia</option>
                                 <option value="Adamawa">Adamawa</option>
@@ -143,7 +143,7 @@ if (isset($_POST['register_btn'])) {
                             </div>
                             <div class="form-group">
                                 <label for="age">Age </label>
-                                <select class="custom-select" name="age">
+                                <select class="custom-select" name="age" required="">
                                 <option selected>Select Age</option>
                                 <option value="17">17</option>
                                 <option value="18">18</option>
@@ -167,14 +167,14 @@ if (isset($_POST['register_btn'])) {
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="ighandle">@</span>
                                     </div>
-                                    <input type="text" class="form-control"name="ighandle" id="ighandle" placeholder="Instagram Handle" aria-describedby="inputGroupPrepend2" required>
+                                    <input type="text" class="form-control"name="ighandle" id="ighandle" placeholder="Instagram Handle" aria-describedby="inputGroupPrepend2" required="">
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label for="picture">Upload photograph</label>
-                                <input type="file" name="picture" id="picture" class="custom-input-file" accept="image/*" />
+                                <input type="file" name="picture" id="picture" class="custom-input-file" required="" accept="image/*" />
                             </div>
-                            <button type="submit" class="btn btn-primary btn-block" name="register_btn" id="register_btn">
+                            <button type="submit" class="btn btn-primary btn-block" name="register_btn">
                             Sign up
                             </button>
                         </form>
