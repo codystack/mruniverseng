@@ -52,7 +52,7 @@
 
                                         <ul class="list-unstyled mb-0">
                                             
-											<li class="nav-item">
+											<li class="nav-item <?php if($page=='Security'){echo 'active';}?>">
 												<a class="nav-link" href="security">Security</a>
 											</li>
 											<li class="nav-item">

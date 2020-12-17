@@ -27,7 +27,7 @@ include ('./config/auth_controller.php');
 								<h3 class="mb-0 h4"><?php echo $page; ?></h3>
 							</div>
 							<!-- card body -->
-							<div class="card-body p-4">
+							<div class="card-body p-4 col-lg-6 col-md-6 col-12">
 								<div class="bg-light-primary p-4 rounded-lg mb-4">
 									<div class="d-flex justify-content-between mb-4 ">
 										<div class="font-13">
@@ -41,20 +41,13 @@ include ('./config/auth_controller.php');
 									</div>
 									<div class="d-flex justify-content-between">
 										<div class="">
-											<a href="#!" class="btn btn-primary btn-sm mr-4"
-												>Upgrade Plan</a
-											><a href="#!" class="text-secondary"
-												>Cancel Subscription</a
-											>
-										</div>
-										<div class="font-13">
-											<span> Next payment due</span
-											><span class="text-dark ml-2 font-weight-bold"
-												>April 22, 2021</span
-											>
+											<a href="contestants" class="btn btn-primary btn-sm mr-4">View Contestants</a>
 										</div>
 									</div>
-								</div>
+                                </div>
+                            </div>
+                            
+                            <div class="card-body p-4 col-lg-6 col-md-6 col-12">
 								<div class="bg-light p-4 rounded-lg">
 									<div class="d-flex justify-content-between mb-4">
 										<div class="font-13">
@@ -68,15 +61,7 @@ include ('./config/auth_controller.php');
 									</div>
 									<div class="d-flex justify-content-between">
 										<div class="">
-											<a href="#!" class="btn btn-dark btn-sm mr-4 disabled"
-												>Expired Plan</a
-											>
-										</div>
-										<div class="font-13">
-											<span> Next payment due</span
-											><span class="text-dark ml-2 font-weight-bold"
-												>April 22, 2021</span
-											>
+											<a href="messages" class="btn btn-dark btn-sm mr-4 disabled">View Messages</a>
 										</div>
 									</div>
 								</div>
