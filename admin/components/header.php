@@ -1,17 +1,24 @@
+<?php
+if (isset($_GET['logout'])) {
+    session_destroy();
+    unset($_SESSION['username']);
+    header("location: login");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 
 <head>
-    <title>Mr. Universe Nigeria&trade; :: Redefining Masculinity</title>
+    <title>Dashboard :: Mr. Universe Nigeria&trade; </title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Libs CSS -->
-    <link rel="stylesheet" href="assets/libs/tiny-slider/dist/tiny-slider.css">
-    <link rel="stylesheet" href="assets/libs/ion-rangeslider/css/ion.rangeSlider.min.css">
+    <link rel="stylesheet" href="../assets/libs/tiny-slider/dist/tiny-slider.css">
+    <link rel="stylesheet" href="../assets/libs/ion-rangeslider/css/ion.rangeSlider.min.css">
     <!-- Theme CSS -->
-    <link rel="stylesheet" href="assets/css/theme.min.css">
+    <link rel="stylesheet" href="../assets/css/theme.min.css">
     <meta property="og:url" content="https://voteonline.com.ng/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Mr. Universe Nigeria™ :: Redefining Masculinity">
@@ -24,6 +31,3 @@
 </head>
 
 <body>
-
-<!-- header -->
-<div class="header fixed-top border-top-3 border-top border-primary">

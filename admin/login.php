@@ -1,3 +1,6 @@
+<?php
+include ('./config/auth_controller.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,21 +40,21 @@
                     <!-- Form -->
                     <a href="\" class="mb-4 d-flex justify-content-center">
                         <img src="../assets/images/logo-dark.png" alt="" width="170px"></a>
-
                     <div class="bg-white p-4 p-xl-6 p-xxl-8 p-lg-4 rounded-lg border">
                         <form role="form-row" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
                             <h1 class="mb-1 text-center">Welcome</h1>
-                            <p class="mb-4 text-center">Login using your portal credentials.</p>
+                            <p class="mb-4 text-center">Login using your credentials.</p>
+                            <div class="alert-danger1 text-center" role="alert" id="message"><?= $_SESSION['error_message'] ?></div>
                             <div class="form-group">
                                 <label for="username" class="text-dark font-14">Username<span class="text-danger">*</span> </label>
-                                <input type="text" id="username" class="form-control " placeholder="Enter username" required="">
+                                <input type="text" name="username" class="form-control " placeholder="Enter username" required="">
                             </div>
                             <div class="form-group mb-4">
                                 <label for="password" class="text-dark font-14">Password<span class="text-danger">*</span></label>
-                                <input type="password" id="password" class="form-control" placeholder="Enter password" required="">
+                                <input type="password" name="password" class="form-control" placeholder="Enter password" required="">
                             </div>
 
-                            <button class="btn btn-primary btn-block" type="submit" name="admin_login_btn">
+                            <button class="btn btn-primary btn-block" type="submit" name="login_btn">
                                 Login
                             </button>
                         </form>
