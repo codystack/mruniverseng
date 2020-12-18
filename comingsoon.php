@@ -34,7 +34,7 @@
                 <div class="offset-lg-1 col-lg-4 col-12">
                     <h1 class="display-2 mb-3 font-weight-bold ">Coming Soon!</h1>
                     <p class="mb-4">
-                        Sorry, we working on something cool for you. Go ahead and try the button at the bottom to find your way back!
+                        Sorry, we're working on something cool for you. Go ahead and try the button at the bottom to find your way back!
                     </p>
                     <a href="\" class="btn btn-primary">Go Back to Main Site</a>
                 </div>

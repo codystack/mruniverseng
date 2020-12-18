@@ -9,7 +9,7 @@ include ('./components/navbar.php');
             <div class="row">
                 <div class="offset-lg-2 col-lg-8 col-md-12 col-12">
                     <div class="text-center py-lg-16 py-12">
-                        <h1 class="mb-3 display-4 text-white">Get Connect</h1>
+                        <h1 class="mb-3 display-4 text-white">Connect With Us</h1>
                         <p class="lead text-light mb-4 mb-lg-0">
                             Our team gets hundreds of emails, notes, and requests for different opportunities every day. we do read every single email that comes through.
                         </p>
@@ -28,7 +28,7 @@ include ('./components/navbar.php');
                             <div class="mb-5">
                                 <h2 class="mb-3">We love Hearing From You</h2>
                                 <p>
-                                    If you are looking forward to discuss business or make inquiry,<br>please fill out this form. We will get in touch with you.
+                                    If you are looking forward to discuss business or make Enquiry,<br>please fill out this form. We will get in touch with you.
                                 </p>
                             </div>
                             
@@ -82,13 +82,13 @@ include ('./components/navbar.php');
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-12">
                             <div class="text-center">
-                                <h4 class="h5 mb-3">Speaking inquiries:</h4>
+                                <h4 class="h5 mb-3">Speaking Enquiries:</h4>
                                 <p class="text-danger font-weight-bold">08133466916<br>07035217457</p>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-12">
                             <div class="text-center">
-                                <h4 class="h5 mb-3">Business inquiries:</h4>
+                                <h4 class="h5 mb-3">Business Enquiries:</h4>
                                 <a href="#!" class="text-danger font-weight-bold">info@mruniversenigeria.org</a>
                                 <a href="mailto:mruniversenigeriapageant@gmail.com" class="text-danger font-weight-bold">mruniversenigeriapageant@gmail.com</a>
                             </div>
