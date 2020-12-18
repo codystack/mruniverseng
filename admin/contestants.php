@@ -27,9 +27,29 @@ include ('./config/auth_controller.php');
 								class="card-header bg-white p-4 d-flex justify-content-between align-items-center"
 							>
 								<h4 class="mb-0"><?php echo $page; ?></h4>
-								<a href="#!" class="btn btn-primary btn-sm">Add New</a>
+								<a href="#!" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addNew">Add New</a>
                 </div>
                 <!-- card body -->
+                <?php
+                  $id  = $_GET['id'];
+                  $query = "SELECT * FROM users WHERE id='$id'";
+                  $results = mysqli_query($conn, $query);
+                  while($row = mysqli_fetch_array($results)) {
+                          $id           = $row['id'];
+                          $fname        = $row['firstName'];
+                          $lname        = $row['lastName'];
+                          $email        = $row['email'];
+                          $phone        = $row['phone'];
+                          $state        = $row['state'];
+                          $age          = $row['age'];
+                          $ighandle     = $row['ighandle'];
+                          $picture      = $row['picture'];
+                          $picture1     = $row['picture1'];
+                          $picture2     = $row['picture2'];
+                          $regno        = $row['regno'];
+                          $date         = $row['date'];
+
+                ?>
                 <div class="card-body p-4 ">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item px-0 pb-3 pt-0">
@@ -37,7 +57,7 @@ include ('./config/auth_controller.php');
                                 <div class="d-flex">
                                     <img src="../assets/images/avatar-6.png" alt="" class="rounded-circle avatar-lg" />
                                     <div class="ml-3">
-                                      <h5 class="mb-0">Toney Crews</h5>
+                                      <h5 class="mb-0"><?php echo $fname; ?></h5>
                                       <span class="font-12">toneycrews@coach.com</span>
                                     </div>
                                 </div>
@@ -59,11 +79,14 @@ include ('./config/auth_controller.php');
                         </li>
                     </ul>
                 </div>
+                <?php }  ?>
             </div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-
-<?php include ('./components/footer.php'); ?>
+<?php 
+include ('./components/modal.php');
+include ('./components/footer.php'); 
+?>
