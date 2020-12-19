@@ -17,6 +17,21 @@ if (isset($_POST['register_btn'])) {
     $picture_path1  = $conn->real_escape_string('upload/'.$_FILES['picture1']['name']);
     $picture_path2  = $conn->real_escape_string('upload/'.$_FILES['picture2']['name']);
 
+    if (file_exists($picture_path)) 
+	{
+    $picture_path = $conn->real_escape_string('upload/'.uniqid().rand().$_FILES['picture']['name']);
+    }
+    
+    if (file_exists($picture_path1)) 
+	{
+    $picture_path1 = $conn->real_escape_string('upload/'.uniqid().rand().$_FILES['picture1']['name']);
+    }
+    
+    if (file_exists($picture_path2)) 
+	{
+    $picture_path2 = $conn->real_escape_string('upload/'.uniqid().rand().$_FILES['picture2']['name']);
+	}
+
     $checker = 0;
 
     //make sure file type is image
