@@ -32,9 +32,10 @@
                 <div class="offset-lg-3 col-lg-6 col-md-12 col-12 text-center">
                     <svg class="mb-4 css-i6dzq1" viewBox="0 0 24 24" width="104" height="104" stroke="#16D570" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                     <h2>Registration Successful!</h2>
-                    <p class="mb-4">Please check your mail or spam mail for <strong>REG NO.</strong><br>
+                    <p class="mb-4">Please check your mail or spam mail for confirmation email or <a href="https://www.mruniversenigeria.org/verify"><strong>CLICK HERE</strong></a> <br>to verify registration.<br>
                         For further enquiries send an email to <a href="mailto:info@mruniversenigeria.org">info@mruniversenigeria.org</a><br> <em><strong>NOTE:</strong></em> Maultiple registration leads to automatic disqualification.</p>
                     <a href="\" class="btn btn-primary">Go back to main site</a>
+                    <a href="verify" class="btn btn-info ml-2">Get Reg No.</a>
                 </div>
             </div>
         </div>
