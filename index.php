@@ -91,6 +91,27 @@ include ('./components/navbar.php');
         </div>
     </div>
     <!-- program section -->
+
+    <div class="">
+      <div class="container">
+        <div class="row">
+          <div class="offset-xl-2 col-xl-8 col-lg-12 col-md-12 col-12">
+            <div class="mb-8 text-center">
+              <h2 class="mb-3 h1">
+                Countdown to Close of Registration
+              </h2>
+                <div class="time">
+                    <span><div id="d">00</div><strong>Days</strong></span>
+                    <span><div id="h">00</div><strong>Hours</strong></span>
+                    <span><div id="m">00</div><strong>Minutes</strong></span>
+                    <span><div id="s">00</div><strong>Seconds</strong></span>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <div class="py-7 pt-lg-8 pb-lg-5">
     </div>
 
