@@ -31,13 +31,13 @@ include ('./config/auth_controller.php');
                 </div>
                 <!-- card body -->
                 <?php
-                  $id  = $_GET['id'];
-                  $query = "SELECT * FROM users WHERE id='$id'";
+                
+                  $query = "SELECT * FROM users order by date ASC";
                   $results = mysqli_query($conn, $query);
                   while($row = mysqli_fetch_array($results)) {
                           $id           = $row['id'];
-                          $fname        = $row['firstName'];
-                          $lname        = $row['lastName'];
+                          $fname        = $row['fname'];
+                          $lname        = $row['lname'];
                           $email        = $row['email'];
                           $phone        = $row['phone'];
                           $state        = $row['state'];
@@ -55,23 +55,20 @@ include ('./config/auth_controller.php');
                         <li class="list-group-item px-0 pb-3 pt-0">
                             <div class="d-flex justify-content-between">
                                 <div class="d-flex">
-                                    <img src="../assets/images/avatar-6.png" alt="" class="rounded-circle avatar-lg" />
+                                    <img src="../<?php echo $picture;?>" alt="" class="rounded-circle avatar-lg" />
                                     <div class="ml-3">
-                                      <h5 class="mb-0"><?php echo $fname; ?></h5>
-                                      <span class="font-12">toneycrews@coach.com</span>
+                                      <h5 class="mb-0"><?php echo $fname;?> <?php echo $lname;?> ( <?php echo $age;?><span class="font-12">/yrs</span> )</h5>
+                                      <span class="font-12"><?php echo $email;?></span>
                                     </div>
                                 </div>
                                 <div>
-                                  <a href="" class="btn btn-primary btn-sm">View</a>
                                     <span class="dropdown">
                                       <a class="text-muted text-decoration-none" href="#!" role="button" id="dropdownOne" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="fe fe-more-vertical"></i>
+                                        <i class="fa fa-bars" aria-hidden="true"></i>
                                       </a>
-
                                       <span class="dropdown-menu  dropdown-menu-right dropdown-menu-md-left" aria-labelledby="dropdownOne">
-                                        <a class="dropdown-item" href="#!">Edit</a>
-                                        <a class="dropdown-item" href="#!">Remove</a>
-                                        <a class="dropdown-item" href="#!">Make it Primary</a>
+                                        <?php echo "<a class=\"dropdown-item\" href=\"user_detail.php?id=$id\">View</a>" ?>
+                                        <a class="dropdown-item" href="#!">Delete</a>
                                       </span>
                                     </span>
                                 </div>

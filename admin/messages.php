@@ -60,6 +60,17 @@ include ('./config/auth_controller.php');
                         echo "<td class=\"align-middle\">" .$phoneNum. "</td>";
                         echo "<td class=\"align-middle\">" .$email. "</td>";
                         echo "<td class=\"align-middle\">" .$purpose. "</td>";
+                        echo "<div>
+                                <span class=\"dropdown\">
+                                    <a class=\"text-muted text-decoration-none\" href=\"#!\" role=\"button\" id=\"dropdownOne\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false">
+                                    "<i class=\"fe fe-more-vertical\"></i>
+                                    </a>
+                                    <span class=\"dropdown-menu  dropdown-menu-right dropdown-menu-md-left\" aria-labelledby=\"dropdownOne\">
+                                    <a class=\"dropdown-item\" href=\"#!\"> .View. </a>
+                                    <a class=\"dropdown-item\" href=\"#!\">Delete</a>
+                                    </span>
+                                </span>
+                            </div>";
                       "</tr>";
                     }
                 }

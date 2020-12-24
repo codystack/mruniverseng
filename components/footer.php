@@ -49,7 +49,6 @@
     <script src="assets/libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
     <script src="assets/libs/inputmask/dist/jquery.inputmask.min.js"></script>
     <script src="assets/libs/tiny-slider/dist/min/tiny-slider.js"></script>
-
     <!-- clipboard -->
     <script src="assets/js/clipboard.min.js"></script>
 
