@@ -10,10 +10,11 @@ include ('db.php');
     $phoneNum   = $conn->real_escape_string($_POST['phoneNum']);
     $email      = $conn->real_escape_string($_POST['email']);
     $purpose    = $conn->real_escape_string($_POST['purpose']);
+    $comment    = $conn->real_escape_string($_POST['comment']);
 
 
-    $sql = "INSERT INTO messages (firstName, lastName, phoneNum, email, purpose)"
-        . "VALUES ('$firstName', '$lastName', '$phoneNum', '$email', '$purpose')";
+    $sql = "INSERT INTO messages (firstName, lastName, phoneNum, email, purpose, comment)"
+        . "VALUES ('$firstName', '$lastName', '$phoneNum', '$email', '$purpose', '$comment')";
     
         if ($conn->query($sql) === TRUE) {
             echo "success";

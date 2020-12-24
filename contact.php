@@ -58,6 +58,10 @@ include ('./components/navbar.php');
                                     <option value="Enquiries">Enquiries</option>
                                     </select>
                                 </div>
+                                <div class="from-group col-12 mb-3">
+                                    <label for="email" class="sr-only">Comment</label>
+                                    <textarea class="form-control" placeholder="Tell us the about your purpose." name="comment" rows="3"></textarea>
+                                </div>
                                 <div class="col-12">
                                     <button name="register" id="register" class="btn btn-primary btn-block">
                                     Send Messages
