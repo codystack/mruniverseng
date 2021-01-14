@@ -91,7 +91,7 @@ include ('./components/navbar.php');
         </div>
     </div>
     <!-- program section -->
-
+<!--
     <div class="">
       <div class="container">
         <div class="row">
@@ -110,7 +110,7 @@ include ('./components/navbar.php');
         </div>
       </div>
     </div>
-
+-->
 
     <div class="py-7 pt-lg-8 pb-lg-5">
     </div>

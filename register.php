@@ -1,3 +1,7 @@
+<meta
+ http-equiv="refresh"
+ content="0; URL='registration'"
+/>
 <?php
 session_start();
 $_SESSION['message'] = '';
