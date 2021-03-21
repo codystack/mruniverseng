@@ -16,6 +16,7 @@ if (isset($_GET['logout'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Libs CSS -->
     <link rel="stylesheet" href="../assets/libs/tiny-slider/dist/tiny-slider.css">
+    <link rel="stylesheet" href="../assets/css/dataTables.min.css">
     <link rel="stylesheet" href="../assets/libs/ion-rangeslider/css/ion.rangeSlider.min.css">
     <!-- Theme CSS -->
     <link rel="stylesheet" href="../assets/css/theme.min.css">

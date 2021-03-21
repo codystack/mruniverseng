@@ -27,56 +27,66 @@ include ('./config/auth_controller.php');
 								<h3 class="mb-0 h4"><?php echo $page ?></h3>
               </div>
               
-							<!-- Messages Table Start -->
-							<div class="table-responsive border-0">
-								<table class="table mb-0 text-nowrap ">
-									<thead class="bg-light ">
-										<tr>
-											<th scope="col" class="py-2 border-bottom-0">Date</th>
-											<th scope="col" class="py-2 border-bottom-0">Full Name</th>
-											<th scope="col" class="py-2 border-bottom-0">Phone</th>
-                      <th scope="col" class="py-2 border-bottom-0">Email</th>
-                      <th scope="col" class="py-2 border-bottom-0">Purpose</th>
-										</tr>
-									</thead>
-                    <tbody>
-                    <?php
-                      $query = "SELECT * FROM messages order by date DESC";
-                      $result = mysqli_query($conn, $query);
-                      if (mysqli_num_rows($result) > 0) {
-                          // output data of each row
-                          while($row = mysqli_fetch_assoc($result)) {
-                              $id           = $row['id'];
-                              $firstName    = $row['firstName'];
-                              $lastName     = $row['lastName'];
-                              $phoneNum     = $row['phoneNum'];
-                              $email        = $row['email'];
-                              $purpose      = $row['purpose'];
-                              $date         = $row['date'];
-                                           
-                      echo "<tr>";
-                        echo "<td class=\"align-middle\">" .date('d/m/Y', strtotime($date)). "</td>";
-                        echo "<td class=\"align-middle\">" .$firstName. '                                                                                                                                                                                                                                                                                                                                                                                                                                                    ' .$lastName. "</td>";
-                        echo "<td class=\"align-middle\">" .$phoneNum. "</td>";
-                        echo "<td class=\"align-middle\">" .$email. "</td>";
-                        echo "<td class=\"align-middle\">" .$purpose. "</td>";
-                        echo "<div>
-                                <span class=\"dropdown\">
-                                    <a class=\"text-muted text-decoration-none\" href=\"#!\" role=\"button\" id=\"dropdownOne\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false">
-                                    "<i class=\"fe fe-more-vertical\"></i>
-                                    </a>
-                                    <span class=\"dropdown-menu  dropdown-menu-right dropdown-menu-md-left\" aria-labelledby=\"dropdownOne\">
-                                    <a class=\"dropdown-item\" href=\"#!\"> .View. </a>
-                                    <a class=\"dropdown-item\" href=\"#!\">Delete</a>
-                                    </span>
-                                </span>
-                            </div>";
-                      "</tr>";
-                    }
-                }
-                ?>
-                    </tbody>
-                </table>
+                <!-- Messages Table Start -->
+                <div class="table-responsive border-0">
+                    <div class="card-body">
+                        <table id="datatables-basic" class="table table-striped" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>S/N</th>
+                                    <th>Full Name</th>
+                                    <th>Phone</th>
+                                    <th>Date</th>
+                                    <th class="text-right">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <?php
+                                $message_query = "SELECT * FROM messages order by date DESC";
+                                $result = mysqli_query($conn, $message_query);
+                                if (mysqli_num_rows($result) > 0) {
+                                    // output data of each row
+                                    while($row = mysqli_fetch_assoc($result)) {
+                                        $id = $row['id'];
+                                        $firstName = $row['firstName'];
+                                        $lastName = $row['lastName'];
+                                        $phoneNum = $row['phoneNum'];
+                                        $email = $row['email'];
+                                        $purpose = $row['purpose'];
+                                        $date = $row['date'];
+
+                                echo "<tr>";
+                                    echo "<td>" .$id. "</td>";
+                                    echo "<td>" .$firstName. "  " .$lastName. "</td>";
+                                    echo "<td>" .$phoneNum. "</td>";
+                                    echo "<td>" .date("d(D) M Y", strtotime($date)). "</td>";
+                                    echo "<td class=\"text-right\">"
+                                    ."<button class=\"btn btn-primary messageinfo btn-sm\" data-id='".$id."'><i class='far fa-eye'></i> View</button>".
+                                    "</td>";
+                                "</tr>";
+                                    }
+                                }else {
+                                    echo "<td><p>No Request Yet!</p></td>";
+                                }
+                                if (isset($_GET['deleteid'])){
+                                    $del_selected = mysqli_query($con, "DELETE FROM userss WHERE id = '".$_GET['deleteid']."'");
+                                    mysqli_query($con,"ALTER TABLE users AUTO_INCREMENT = 1");
+                                    echo "<meta http-equiv=\"refresh\" content=\"0;URL=contestants\">";
+                                    exit();
+                                }
+                                ?>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>S/N</th>
+                                    <th>Full Name</th>
+                                    <th>Phone</th>
+                                    <th>Date</th>
+                                    <th class="text-right">Action</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
               </div>
               <!-- Messages Table End -->
 
@@ -86,6 +96,25 @@ include ('./config/auth_controller.php');
     </div>
     </div>
 
-<?php
-include ('./components/footer.php'); 
-?>
+    <!-- Message Modal -->
+    <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="messageModal">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Contact Messages</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body m-3">
+
+                </div>
+                <!--
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger btn-lg" data-dismiss="modal">Close</button>
+                </div>
+                -->
+            </div>
+        </div>
+    </div>
+<?php include ('./components/footer.php'); ?>

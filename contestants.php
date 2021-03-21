@@ -1,7 +1,3 @@
-<meta
- http-equiv="refresh"
- content="0; URL='comingsoon'"
-/>
 <?php
 include ('./components/header.php');
 include ('./components/navbar.php');
