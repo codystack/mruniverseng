@@ -58,19 +58,19 @@
 </script>
 
 
-<!--
+<!-- Make Deposit Modal Start -->
 <div class="modal fade" id="depositmodal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-body" style="text-align: center">
                 <h1>Notice!</h1>
-                <p class="mb-3">This videos/contents remains the property of 001 Entertainment. Any alteration, copying, downloading, reproduction and storage in any medium, including any web site, without the prior written consent of 001 Entertainment (Nigeria) will be considered a <strong>criminal offense,</strong> and therefore liable for prosecution. </p>
+                <p class="mb-3">This videos/contents remains the property of Que Concept. Any alteration, copying, downloading, reproduction and storage in any medium, including any web site, without the prior written consent of Que Concept (Nigeria) will be considered a <strong>criminal offense,</strong> and therefore liable for prosecution. </p>
                 <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
 </div>
--->$_FILES
+-->
 
 <script type="text/javascript">
     $(document).ready(function(){
