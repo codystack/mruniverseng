@@ -36,11 +36,13 @@
                         <li class="nav-item"><a class="nav-link" href="contestants">Contestants</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>
                     </ul>
+                    <!--
                     <div class="header-btn">
                         <a href="register" class="btn btn-outline-primary btn-sm" style="margin-right: 10px">Register</a>
                     </div>
+                    -->
                     <div class="header-btn">
-                        <a href="vote " class="btn btn-primary btn-sm ">Vote Now</a>
+                        <a href="live" class="btn btn-primary btn-sm "><i class='fab fa-youtube-play'></i>Watch Live!</a>
                     </div>
                 </div>
             </nav>

@@ -1,3 +1,41 @@
+<!-- Live Stream Modal Start-->
+<div class="modal fade" id="addNewLiveStream" tabindex="-1" aria-labelledby="addNewLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg  modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header p-4">
+        <h4 class="modal-title" id="addNewLabel">Add New <?php echo $page ?> Link</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- form -->
+        <div class=" p-3">
+          <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
+            <div class="row">
+              <div class="form-group col-md-12 col-12">
+                <label for="firstName" class="font-14 text-dark">Event Title<span class="text-danger">*</span></label>
+                <input type="text" name="linkTitle" placeholder="Fashion Show" class="form-control" required />
+              </div>
+              <div class="form-group col-md-12 col-12">
+                <label for="lastName" class="font-14 text-dark">Youtube Link<span class="text-danger">*</span></label>
+                <input type="text" name="youtubelink" placeholder="https://www.youtube.com/embed/x57G-uQBuF0" class="form-control" 	required />
+              </div>
+            </div>
+            <div class="text-center">
+              <button name="add_admin_btn" class="btn btn-icon btn-dark text-center" type="submit">Add Admin</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" name="addNewLink_btn" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Live Stream Modal End-->
+
 <!-- Modal Start-->
 <div class="modal fade" id="addNew" tabindex="-1" aria-labelledby="addNewLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg  modal-dialog-centered">

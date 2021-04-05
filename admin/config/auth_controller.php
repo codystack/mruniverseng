@@ -33,3 +33,24 @@ if (isset($_POST['login_btn'])) {
   }
 }
 //Login Admin End
+
+
+//Add Streaming Link Query
+if (isset($_POST['addNewLink_btn'])) {
+
+    $youtubelink = $conn->real_escape_string($_POST['youtubelink']);
+    $linkTitle = $conn->real_escape_string($_POST['linkTitle']);
+
+    $query = "INSERT INTO livelink (youtubelink, linkTitle) 
+  			        VALUES('$youtubelink', '$linkTitle')";
+    mysqli_query($conn, $query);
+
+    if (mysqli_affected_rows($conn) > 0) {
+        $_SESSION['email'] = $email;
+        $_SESSION['success_message_title'] = "Show Added";
+        $_SESSION['success_message'] = "You're Live Now!";
+    }else {
+        $_SESSION['message_title'] = "Agent Already Exist!";
+        $_SESSION['message'] = "Modify or Delete user details";
+    }
+}

@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli('localhost', 'root', 'Webify2020!!', 'mruniverseng');
+$conn = new mysqli('localhost', 'webify', 'Webify2020!!', 'livestream');
 error_reporting(E_ALL ^ E_NOTICE); // turn ON showing errors
 // Check connection
 if (mysqli_connect_errno()) {

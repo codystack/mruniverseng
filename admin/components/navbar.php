@@ -46,6 +46,9 @@
 											<li class="nav-item <?php if($page=='Messages'){echo 'active';}?>">
 												<a class="nav-link" href="messages">Messages</a>
 											</li>
+											<li class="nav-item <?php if($page=='Live Streaming'){echo 'active';}?>">
+												<a class="nav-link" href="go-live">Go Live</a>
+											</li>
                                         </ul>
 
                                         <span class="heading border-top pt-4 d-block">Settings</span>

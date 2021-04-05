@@ -42,7 +42,7 @@ include ('./config/auth_controller.php');
                             </thead>
                             <tbody>
                             <?php
-                                $message_query = "SELECT * FROM messages order by date DESC";
+                                $message_query = "SELECT * FROM messages order by date ASC";
                                 $result = mysqli_query($conn, $message_query);
                                 if (mysqli_num_rows($result) > 0) {
                                     // output data of each row

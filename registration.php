@@ -34,7 +34,7 @@
                 <div class="offset-lg-1 col-lg-4 col-12">
                     <h1 class="display-3 mb-3 font-weight-bold ">Registration Closed!</h1>
                     <p class="mb-4">
-                        Sorry, you came late, stayed tuned on all of our social media platform to get te latest updates and news!
+                        Sorry Chief!, registration closed, stay tuned on all of our social media platform to get te latest updates and news!
                     </p>
                     <a href="\" class="btn btn-primary">Go Back to Main Site</a>
                 </div>

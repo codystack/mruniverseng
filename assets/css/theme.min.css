@@ -47443,3 +47443,15 @@ div.im-colormask>div {
     font-size: 2rem;
   }
 }
+
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: .3rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #6c757d;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}

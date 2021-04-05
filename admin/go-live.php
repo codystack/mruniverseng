@@ -1,7 +1,7 @@
 <?php
-$page = 'Contestants'; 
+$page = 'Live Streaming'; 
 include ('./components/header.php');
-include ('./config/auth_controller.php');
+require_once "./config/auth_controller.php";
 ?>
 
     <!-- pageheader section -->
@@ -25,27 +25,17 @@ include ('./config/auth_controller.php');
 							<!-- card header -->
 							<div class="card-header bg-white p-4 d-flex justify-content-between align-items-center">
 								<h4 class="mb-0"><?php echo $page; ?></h4>
-								<!--<a href="#!" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addNew">Add New</a>-->
+								<a href="#!" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addNewLiveStream">Add New Link</a>
                             </div>
                 <!-- card body -->
                 <?php
                 
-                  $query = "SELECT * FROM users order by date ASC";
+                  $query = "SELECT * FROM livelink order by date ASC";
                   $results = mysqli_query($conn, $query);
                   while($row = mysqli_fetch_array($results)) {
-                          $id           = $row['id'];
-                          $fname        = $row['fname'];
-                          $lname        = $row['lname'];
-                          $email        = $row['email'];
-                          $phone        = $row['phone'];
-                          $state        = $row['state'];
-                          $age          = $row['age'];
-                          $ighandle     = $row['ighandle'];
-                          $picture      = $row['picture'];
-                          $picture1     = $row['picture1'];
-                          $picture2     = $row['picture2'];
-                          $regno        = $row['regno'];
-                          $date         = $row['date'];
+                          $id = $row['id'];
+                          $youtubelink  = $row['youtubelink'];
+                          $linkTitle = $row['linkTitle'];
 
                 ?>
                 <div class="card-body p-4 ">
@@ -53,9 +43,9 @@ include ('./config/auth_controller.php');
                         <li class="list-group-item px-0 pb-3 pt-0">
                             <div class="d-flex justify-content-between">
                                 <div class="d-flex">
-                                    <img src="../<?php echo $picture;?>" alt="" class="rounded-circle avatar-lg" />
+                                    <img src="https://i.imgur.com/OInFTks.png" alt="" class="rounded-circle avatar-lg" />
                                     <div class="ml-3">
-                                      <h5 class="mb-0"><?php echo $fname;?> <?php echo $lname;?> ( <?php echo $age;?><span class="font-12">/yrs</span> )</h5>
+                                      <h5 class="mb-0"><?php echo $linkTitle;?></h5>
                                       <span class="font-12"><?php echo $email;?></span>
                                     </div>
                                 </div>
