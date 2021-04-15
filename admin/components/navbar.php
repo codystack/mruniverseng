@@ -40,6 +40,9 @@
                                             <li class="nav-item <?php if($page=='Dashboard'){echo 'active';}?>">
 												<a class="nav-link" href="dashboard">Dashboard</a>
 											</li>
+											<li class="nav-item <?php if($page=='Applicants'){echo 'active';}?>">
+												<a class="nav-link" href="applicants">Applicants</a>
+											</li>
 											<li class="nav-item <?php if($page=='Contestants'){echo 'active';}?>">
 												<a class="nav-link" href="contestants">Contestants</a>
 											</li>

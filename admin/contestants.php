@@ -1,7 +1,7 @@
 <?php
 $page = 'Contestants'; 
 include ('./components/header.php');
-include ('./config/auth_controller.php');
+require_once ('./config/auth_controller.php');
 ?>
 
     <!-- pageheader section -->
@@ -19,63 +19,81 @@ include ('./config/auth_controller.php');
 
 <?php include ('./components/navbar.php'); ?>
 
-					<!-- dashboard payment plan -->
+					
+					<!-- dashboard user -->
 					<div class="col-lg-9 col-md-8 col-12">
-						<div class="card mb-4 ">
+						<div class="card rounded-lg mb-4 ">
 							<!-- card header -->
-							<div class="card-header bg-white p-4 d-flex justify-content-between align-items-center">
-								<h4 class="mb-0"><?php echo $page; ?></h4>
-								<!--<a href="#!" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addNew">Add New</a>-->
-                            </div>
-                <!-- card body -->
-                <?php
-                
-                  $query = "SELECT * FROM users order by date ASC";
-                  $results = mysqli_query($conn, $query);
-                  while($row = mysqli_fetch_array($results)) {
-                          $id           = $row['id'];
-                          $fname        = $row['fname'];
-                          $lname        = $row['lname'];
-                          $email        = $row['email'];
-                          $phone        = $row['phone'];
-                          $state        = $row['state'];
-                          $age          = $row['age'];
-                          $ighandle     = $row['ighandle'];
-                          $picture      = $row['picture'];
-                          $picture1     = $row['picture1'];
-                          $picture2     = $row['picture2'];
-                          $regno        = $row['regno'];
-                          $date         = $row['date'];
+							<div class="card-header bg-white p-4 border-bottom-0 d-flex justify-content-between align-items-center">
+								<h3 class="mb-0 h4"><?php echo $page; ?></h3>
+								<a href="#!" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addNewContestant">Add New</a>
+							</div>
+							<!-- table -->
 
-                ?>
-                <div class="card-body p-4 ">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item px-0 pb-3 pt-0">
-                            <div class="d-flex justify-content-between">
-                                <div class="d-flex">
-                                    <img src="../<?php echo $picture;?>" alt="" class="rounded-circle avatar-lg" />
-                                    <div class="ml-3">
-                                      <h5 class="mb-0"><?php echo $fname;?> <?php echo $lname;?> ( <?php echo $age;?><span class="font-12">/yrs</span> )</h5>
-                                      <span class="font-12"><?php echo $email;?></span>
-                                    </div>
+							<div class="table-responsive border-0">
+                                <div class="card-body">
+                                    <table id="datatables-basic" class="table table-striped" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>S/N</th>
+                                                <th>Contestant Name</th>
+                                                <th>State Representing</th>
+                                                <th class="text-right">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        <?php
+                                            $contestant_query = "SELECT * FROM contestants WHERE status='Active' order by date ASC";
+                                            $result = mysqli_query($conn, $contestant_query);
+                                            if (mysqli_num_rows($result) > 0) {
+                                                // output data of each row
+                                                while($row = mysqli_fetch_assoc($result)) {
+                                                    $id = $row['id'];
+                                                    $firstName = $row['firstName'];
+                                                    $lastName = $row['lastName'];
+                                                    $stateRep = $row['stateRep'];
+                                                    $picture = $row['picture'];
+                                                    $status = $row['status'];
+
+                                            echo "<tr>";
+                                                echo "<td class=\"align-middle align-items-center\">" .$id. "</td>";
+                                                echo "<td class=\"align-middle d-flex align-items-center p-3\">" 
+                                                ."<img src='".$picture."' class='rounded-circle avatar-lg'/>
+												<div class=\"ml-3\">
+												<h5 class=\"mb-0\"> ".$firstName." ".$lastName."</h5>
+												</div>".
+                                                "</td>";
+                                                echo "<td class=\"align-middle align-items-center\">"
+                                                ."<h5 class=\"mb-0\"> ".$stateRep." </h5>". 
+                                                "</td>";
+                                                echo "<td class=\"align-middle align-items-center text-right\">"
+                                                ."<button class=\"btn btn-primary messageinfo btn-sm\" data-id='".$id."'><i class='far fa-eye'></i> View</button>".
+                                                "</td>";
+                                            "</tr>";
+                                                }
+                                            }else {
+                                                echo "<td><p>No Contestant Yet!</p></td>";
+                                            }
+                                            if (isset($_GET['deleteid'])){
+                                                $del_selected = mysqli_query($con, "DELETE FROM userss WHERE id = '".$_GET['deleteid']."'");
+                                                mysqli_query($con,"ALTER TABLE users AUTO_INCREMENT = 1");
+                                                echo "<meta http-equiv=\"refresh\" content=\"0;URL=contestants\">";
+                                                exit();
+                                            }
+                                            ?>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>S/N</th>
+                                                <th>Contestant Name</th>
+                                                <th>State Representing</th>
+                                                <th class="text-right">Action</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
                                 </div>
-                                <div>
-                                    <span class="dropdown">
-                                      <a class="text-muted text-decoration-none" href="#!" role="button" id="dropdownOne" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="fa fa-bars" aria-hidden="true"></i>
-                                      </a>
-                                      <span class="dropdown-menu  dropdown-menu-right dropdown-menu-md-left" aria-labelledby="dropdownOne">
-                                        <?php echo "<a class=\"dropdown-item\" href=\"user_detail.php?id=$id\">View</a>" ?>
-                                        <a class="dropdown-item" href="#!">Delete</a>
-                                      </span>
-                                    </span>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <?php }  ?>
-            </div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

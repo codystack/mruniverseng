@@ -57,6 +57,13 @@
     <script src="../assets/js/theme.min.js"></script>
     <script src="../assets/js/dataTables.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        // Add the following code if you want the name of the file appear on select
+        $(".custom-file-input").on("change", function() {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+    </script>
 
     <?php
     if (isset($_SESSION['message']))

@@ -11,7 +11,7 @@
       <div class="modal-body">
         <!-- form -->
         <div class=" p-3">
-          <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
+          <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" enctype="multipart/form-data">
             <div class="row">
               <div class="form-group col-md-12 col-12">
                 <label for="firstName" class="font-14 text-dark">Event Title<span class="text-danger">*</span></label>
@@ -112,3 +112,54 @@
   </div>
 </div>
 <!-- Modal End-->
+
+
+<!-- Add Contestant Modal -->
+<div class="modal fade" id="addNewContestant" tabindex="-1" aria-labelledby="addNewLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg  modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header p-4">
+        <h4 class="modal-title" id="addNewLabel">Add New</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- form -->
+        <div class=" p-3">
+          <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" enctype="multipart/form-data">
+            <div class="row">
+                <div class="form-group col-md-6 col-12">
+                    <label for="firstName" class="font-14 text-dark">First Name<span class="text-danger">*</span></label>
+                    <input type="text" name="firstName" id="firstName" placeholder="First Name" class="form-control" required/>
+                </div>
+                <div class="form-group col-md-6 col-12">
+                    <label for="lastName" class="font-14 text-dark">Last Name<span class="text-danger">*</span></label>
+                    <input type="text" name="lastName" id="lastName" placeholder="Last Name" class="form-control" required/>
+                </div>
+                <div class="form-group col-md-6 col-12">
+                    <label for="email" class="font-14 text-dark">State Representing<span class="text-danger">*</span></label>
+                    <input type="text" name="stateRep" placeholder="Imo State" class="form-control" required/>
+                </div>
+                <div class="form-group col-md-6 col-12">
+                    <label for="password" class="font-14 text-dark">Contestant Photo<span class="text-danger">*</span></label>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" name="picture">
+                        <label class="custom-file-label" for="customFile">Choose file</label>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button name="add_contestant_btn" class="btn btn-icon btn-dark text-center" type="submit">Add Contestant</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
