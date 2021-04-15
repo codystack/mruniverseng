@@ -14,7 +14,7 @@ include ('./components/navbar.php');
                       <p class="mb-6 lead text-white-50">
                       Mr. Universe Nigeria is the most anticipated male modeling-pageant TV Reality Show in the country.
                       </p>
-                      <a href="register" class="btn btn-primary mr-3">Register Now</a>
+                      <a href="vote" class="btn btn-primary mr-3">Vote Now</a>
                     </div>
                   </div>
                 <div class="offset-xl-2 col-xl-5 offset-lg-1 col-lg-5 col-md-6 col-12 mb-n2 d-none d-md-block">
