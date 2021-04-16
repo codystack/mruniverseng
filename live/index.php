@@ -4,19 +4,29 @@ include ('./components/header.php');
 			<main class="content">
 				<div class="container-fluid">
 
+                <div class="header">
+                    <br><a class="btn btn-primary" href="#" onclick="goBack()" style="background: #ffffff; color: #153D77; font-weight: 600; border-color: #153D77">Go Back</a>
+                </div>
+
                 <img src="https://i.imgur.com/XSGaWUp.png" width="200px">
 
-					<div class="row">
-						<div class="col-md-12 col-lg-8 col-xl-8">
-							<div class="card">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                    <iframe class="embed-responsive-item" src="<?php echo $youtubelink ?>?rel=0&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<div class="row justify-content-md-center">
+						<div class="col-md-12 col-lg-8 col-xl-8 text-center">
+							<div class="card-body">
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4LTttZ1oSfg?rel=0&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
                                 </div>
-							</div>
+                                <form method="get" action="archive" class="pt-2">
+                                    <button class="btn btn-primary btn-lg btn-block mb-3">View Previous Episodes</button>
+                                </form>
+                            </div>
 						</div>
+                        <!--
 						<div class="col-md-12 col-lg-4 col-xl-4">
 
-                            <!-- Next Event -->
+                            
                             <div class="card">
                                 <div class="card-body">
                                     <div class="row">
@@ -54,12 +64,11 @@ include ('./components/header.php');
 
                                 </div>
                             </div>
-
-                            <!-- View Previous Events -->
                             <form method="get" action="archive">
                                 <button class="btn btn-primary btn-lg btn-block mb-3">View Previous Events</button>
                             </form>
                         </div>
+                        -->
 					</div>
 
 			</main>

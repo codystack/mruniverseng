@@ -37,6 +37,12 @@
 </svg>
 <script src="js/app.js"></script>
 
+<script>
+    function goBack() {
+    window.history.back();
+    }
+</script>
+
 
 <script type="text/javascript">
     function myFunction() {
