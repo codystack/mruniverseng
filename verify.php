@@ -114,17 +114,9 @@ if (isset($_POST['verify_btn'])) {
     <script src="../assets/libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
     <script src="../assets/libs/inputmask/dist/jquery.inputmask.min.js"></script>
     <script src="../assets/libs/tiny-slider/dist/min/tiny-slider.js"></script>
-
-
-    <!-- clipboard -->
     <script src="../../../cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
-
-
-
-    <!-- Theme JS -->
     <script src="../assets/js/theme.min.js"></script>
 </body>
 
 
-<!-- Mirrored from codescandy.com/coach/pages/password-reset.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Dec 2020 21:22:17 GMT -->
 </html>

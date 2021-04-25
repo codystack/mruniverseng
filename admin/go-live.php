@@ -46,20 +46,13 @@ require_once "./config/auth_controller.php";
                                     <img src="https://i.imgur.com/OInFTks.png" alt="" class="rounded-circle avatar-lg" />
                                     <div class="ml-3">
                                       <h5 class="mb-0"><?php echo $linkTitle;?></h5>
-                                      <span class="font-12"><?php echo $email;?></span>
+                                      <span class="font-12"><?php echo $youtubelink;?></span>
                                     </div>
                                 </div>
-                                <div>
-                                    <span class="dropdown">
-                                      <a class="text-muted text-decoration-none" href="#!" role="button" id="dropdownOne" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="fa fa-bars" aria-hidden="true"></i>
-                                      </a>
-                                      <span class="dropdown-menu  dropdown-menu-right dropdown-menu-md-left" aria-labelledby="dropdownOne">
-                                        <?php echo "<a class=\"dropdown-item\" href=\"user_detail.php?id=$id\">View</a>" ?>
-                                        <a class="dropdown-item" href="#!">Delete</a>
-                                      </span>
-                                    </span>
-                                </div>
+                                <?php echo "<div>"
+                                 ."<button class=\"btn btn-primary youtubeinfo btn-sm\" data-id='".$id."'><i class='far fa-bookmark'></i>Edit</button>".
+                                "</div>";
+                                ?>
                             </div>
                         </li>
                     </ul>

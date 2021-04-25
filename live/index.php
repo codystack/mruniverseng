@@ -1,5 +1,6 @@
 <?php
 include ('./components/header.php');
+include "../config/db.php";
 ?>
 			<main class="content">
 				<div class="container-fluid">
@@ -10,12 +11,25 @@ include ('./components/header.php');
 
                 <img src="https://i.imgur.com/XSGaWUp.png" width="200px">
 
+                <?php
+                $livelink_query = "SELECT * FROM livelink";
+                $result = mysqli_query($conn, $livelink_query);
+                if (mysqli_num_rows($result) > 0) {
+                    // output data of each row
+                    while($row = mysqli_fetch_assoc($result)) {
+                        $id = $row['id'];
+                        $youtubelink = $row['youtubelink'];
+                        $linkTitle = $row['linkTitle'];
+                        $date = $row['date'];
+                    }
+                }
+                ?>
 					<div class="row justify-content-md-center">
 						<div class="col-md-12 col-lg-8 col-xl-8 text-center">
 							<div class="card-body">
                                 <div class="card">
                                     <div class="embed-responsive embed-responsive-16by9">
-                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4LTttZ1oSfg?rel=0&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/nUWf3OZTcRM?rel=0&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                 </div>
                                 <form method="get" action="archive" class="pt-2">

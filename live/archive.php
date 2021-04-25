@@ -35,6 +35,87 @@ include ('./components/header.php');
                             </div>
                             <h2>Mr. Universe Nigeria 2021 Episode 3</h2>
                         </div>
+
+                        <div class="col-md-12 col-lg-4 col-xl-4 mb-3" style="text-align: center">
+							<div class="card">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/XITV6w854RI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <h2>Mr. Universe Nigeria 2021 Episode 4</h2>
+                        </div>
+
+                        <div class="col-md-12 col-lg-4 col-xl-4 mb-3" style="text-align: center">
+							<div class="card">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/YCqAWjMUOoc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <h2>Mr. Universe Nigeria 2021 Episode 5</h2>
+                        </div>
+
+                        <div class="col-md-12 col-lg-4 col-xl-4 mb-3" style="text-align: center">
+							<div class="card">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/jSKLAQv80zc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <h2>Mr. Universe Nigeria 2021 Episode 6</h2>
+                        </div>
+
+                        <div class="col-md-12 col-lg-4 col-xl-4 mb-3" style="text-align: center">
+							<div class="card">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/j3ny24tsAO8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <h2>Mr. Universe Nigeria 2021 Episode 7</h2>
+                        </div>
+
+                        <div class="col-md-12 col-lg-4 col-xl-4 mb-3" style="text-align: center">
+							<div class="card">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2R7uHLnNfds" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <h2>Mr. Universe Nigeria 2021 Episode 8</h2>
+                        </div>
+
+                        <div class="col-md-12 col-lg-4 col-xl-4 mb-3" style="text-align: center">
+							<div class="card">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/uTCQ9FgdNgg" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <h2>Mr. Universe Nigeria 2021 Episode 9</h2>
+                        </div>
+
+                        <div class="col-md-12 col-lg-4 col-xl-4 mb-3" style="text-align: center">
+							<div class="card">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ondnGBcqAAY" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <h2>Mr. Universe Nigeria 2021 Episode 10</h2>
+                        </div>
+
+                        <div class="col-md-12 col-lg-4 col-xl-4 mb-3" style="text-align: center">
+							<div class="card">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/THiuk2yPPNY" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <h2>Mr. Universe Nigeria 2021 Episode 11</h2>
+                        </div>
+
+                        <div class="col-md-12 col-lg-4 col-xl-4 mb-3" style="text-align: center">
+							<div class="card">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/nUWf3OZTcRM" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <h2>Mr. Universe Nigeria 2021 Episode 12</h2>
+                        </div>
                         
                     </div>
 

@@ -23,13 +23,13 @@
               </div>
             </div>
             <div class="text-center">
-              <button name="add_admin_btn" class="btn btn-icon btn-dark text-center" type="submit">Add Admin</button>
+              <button name="add_link_btn" class="btn btn-icon btn-dark text-center" type="submit">Add New Streaming link</button>
             </div>
           </form>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="submit" name="addNewLink_btn" class="btn btn-primary" data-dismiss="modal">Close</button>
+        <button class="btn btn-primary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>

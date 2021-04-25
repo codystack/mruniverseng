@@ -35,7 +35,7 @@ if (isset($_POST['login_btn'])) {
 
 
 //Add Streaming Link Query
-if (isset($_POST['addNewLink_btn'])) {
+if (isset($_POST['add_link_btn'])) {
 
     $youtubelink = $conn->real_escape_string($_POST['youtubelink']);
     $linkTitle = $conn->real_escape_string($_POST['linkTitle']);
