@@ -14,7 +14,7 @@ include ('./components/navbar.php');
                       <p class="mb-6 lead text-white-50">
                       Mr. Universe Nigeria is the most anticipated male modeling-pageant TV Reality Show in the country.
                       </p>
-                      <a href="vote" class="btn btn-primary mr-3">Vote Now</a>
+                      <!--<a href="register" class="btn btn-primary mr-3">Register</a>-->
                     </div>
                   </div>
                 <div class="offset-xl-2 col-xl-5 offset-lg-1 col-lg-5 col-md-6 col-12 mb-n2 d-none d-md-block">
@@ -176,7 +176,7 @@ A mixed group of carefully-vetted candidates are ushered into a house miles away
                             <p style="text-align: justify;">
                             The HouseGuests will participate in an overall challenge. This challenge ignores team division, and whoever wins the challenge does so individually. The next segment involves a campaign for a client. The HouseGuests perform for these clients in a wide variety of shoots, commercials, or runway shows. These campaigns are performed in the teams that were assigned at the beginning of the series. Immediately afterwards, the client for the episode declares which team performed the best. The Gladiators from winning team are granted immunity, and cannot be eliminated.
                             </p>
-                            <a href="register" class="btn btn-primary">Register Now</a>
+                            <!--<a href="register" class="btn btn-primary">Register Now</a>-->
                         </div>
                     </div>
                 </div>
