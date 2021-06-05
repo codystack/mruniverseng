@@ -21,8 +21,8 @@ include ('./components/navbar.php');
                     <div class="position-relative z-index-1">
                         <img src="assets/images/speaker-img-1.jpg" alt="" class="img-fluid rounded w-100 border-bottom border-bottom-4 border-primary" />
                         <div class="card-img-overlay d-flex flex-column justify-content-end p-4 ">
-                            <h4 class="mb-0 h2" style="color: #fff">Emmanuel Arogboritse</h4>
-                            <span class="font-12" style="color: #fff">Mr Universe Nigeria</span>
+                            <h4 class="mb-0 h2" style="color: #fff">Nathan Atane Ephraim</h4>
+                            <span class="font-12" style="color: #fff">Mr Universe Nigeria 2021</span>
                         </div>
                     </div>
                     <div class="position-relative z-index-1">
