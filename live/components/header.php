@@ -32,22 +32,5 @@
     <!-- Top Menu -->\
     
     <div class="main">
-    <!--
-        <nav class="navbar navbar-expand navbar-theme">
-            <img src="https://i.imgur.com/XSGaWUp.png" width="200px">
-            
-            <div class="navbar-collapse collapse">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown ml-lg-2">
-                        <a class="nav-link dropdown-toggle position-relative" href="#" id="userDropdown" data-toggle="dropdown">
-                            <i class="align-middle fas fa-stream"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                            <a class="dropdown-item" href="logout"><i class="align-middle mr-1 fas fa-fw fa-arrow-alt-circle-right"></i> Log Out</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            -->
 
         </nav>

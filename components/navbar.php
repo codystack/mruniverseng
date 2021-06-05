@@ -37,12 +37,12 @@
                         <li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>
                     </ul>
                     
-                    <div class="header-btn">
+                    <!--<div class="header-btn">
                         <a href="vote" class="btn btn-outline-primary btn-sm" style="margin-right: 10px">Vote Now</a>
-                    </div>
+                    </div>-->
                     
                     <div class="header-btn">
-                        <a href="live" class="btn btn-primary btn-sm "><i class='fab fa-youtube-play'></i>Watch Live!</a>
+                        <a href="live" class="btn btn-primary btn-sm "><i class='fab fa-youtube-play'></i>Re-Watch</a>
                     </div>
                 </div>
             </nav>
